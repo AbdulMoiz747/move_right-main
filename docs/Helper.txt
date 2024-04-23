@@ -1,0 +1,226 @@
+Helper.txt
+
+So here's what I understand.
+
+I have to create a property management system, kinda of like zameen.com or other property websites where there are properties up for selling and sub letting (when a tenant allows someone else to rent property that they are renting from someone else) 
+
+Entities so far
+	property
+		id
+		created_at
+		updated_at
+		title
+		description
+		address
+		location_id
+			city_id
+			area_id
+		landlord_id
+		subletter_id
+		type (enum)
+			house
+			plot
+			apartments
+			industrial
+			condos
+			villas
+			lofts
+
+		list_in (enum)
+			sell
+			rent
+		status
+			available
+			unavailable
+		sq_yard
+		price
+		allow_sublet
+		bedrooms
+		bathrooms
+		kitchens
+		garages
+		built_year
+		uuid
+		amenities (json)
+		media (json)
+			media_1
+			media_2
+			media_3
+			media_4
+			media_5
+
+	location
+		id
+		city_id
+		area_id
+
+	city
+		id
+		name
+
+	area
+		id
+		name
+		city_id
+
+	landlord
+		id
+		created_at
+		updated_at
+		name
+		email
+		password
+		phone
+		about
+		location_id
+		profile_picture
+
+	buyer
+		id
+		created_at
+		updated_at
+		name
+		email
+		password
+		phone
+		about
+		location_id
+		profile_picture
+
+	subletter
+		id
+		created_at
+		updated_at
+		name
+		email
+		password
+		phone
+		about
+		location_id
+		profile_picture
+	
+	contract
+		id
+		created_at
+		updated_at
+		landlord_id
+		buyer_id
+		property_id
+		list_in
+			rent
+			sell
+		from
+		to
+		landlord_signature
+		buyer_signature
+		uuid
+		status
+			valid
+			nullNvoid
+
+	Inspection
+		id
+		created_at
+		updated_at
+		landlord_id
+		buyer_id
+		property_id
+		from
+			buyer
+			landlord
+		items
+		comments
+		
+
+Todo
+	Signup landlord (done)
+	Login landlord (done)
+	Dashboard landlord (done)
+	Fix lazy imgs prob (done)
+	Add property (done)
+	All properties (Done)
+	edit properties (Done)
+	Update Property (Done)
+	Show property (Done)
+	Signup buyer (Done)
+	Login buyer (Done)
+	Conditional hiding from header (Done)
+	dummy properties (miss)
+	Home page setup
+		Search feature enable (done)
+		Set remaining stuff (Done)
+		Contact page (Done)
+		Landlord page (Done)
+		Set header (Done)
+		Set footer (Done)
+		categories (Done)
+			house
+			plot
+			Industrial
+			apartments
+			condos
+			villas
+			lofts
+
+	search properties (Done)
+		keywords
+		type
+		location
+		price
+		latest 10
+
+	Dashboard buyer
+		My properties
+
+	buyer flow
+		Contracts
+
+	polish
+		Landlord main dashboard
+		Profile
+		Acc setting
+
+	favourites
+	
+	Inspection report shit
+
+From notepad
+
+	Property shit (done)
+		Buyer flow. Contract > Upload signatures, to and from date, 	Populate Auto fetch property and buyer info (done)
+		Db design (Done)
+		Git push (done)
+
+		Ui design (done)
+		Arch design (done)
+		Report shit
+		There will be 2 sections to report.
+		Property section:
+			Property details along with pictures, address, amenities such ass wifi, swimming pool etc offered by this property.
+		Property details include bedrooms, bathrooms, garages, kitchens, gardens, the type of property like villa, condo or house. It aslo include price and monthly rent depending.
+
+		Landlord section:
+			Complete detail about landlord will be provided to build trust. His address, other properties, his contacts and socials as well.
+
+
+	Property Proj
+
+	Buyer flow (done) >.>
+		rent (done)
+		sell 
+	Buyer dashboard (done)
+	Report shit as pdf (done)
+	Corresponding changes in landylord dashboard (done)
+	Profile Page (done)
+	Settings page
+	Increase in register information
+	polish (KINDA)
+		Notification system
+		sort out landing dashboard pages
+	Good Dummy data
+	Record good vid
+	Upload vid
+	Setup stuff
+
+
+Revisions

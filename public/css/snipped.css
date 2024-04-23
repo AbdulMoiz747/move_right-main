@@ -1,0 +1,699 @@
+@font-face { 
+  font-family:'myriad-pro';
+  font-style:normal;
+  font-weight:400;
+  src:local('myriad-pro'), url(./fonts/MyriadPro-Regular.otf-#IEfix) format('embedded-opentype'),
+  src: local('myriad-pro'), url(./fonts/MyriadPro-Regular.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'myriad-pro';
+  font-style:normal;
+  font-weight:700;
+  src:local('myriad-pro bold'), url(./fonts/MyriadPro-Bold.otf-#IEfix) format('embedded-opentype'),
+  src: local('myriad-pro bold'), url(./fonts/MyriadPro-Bold.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'myriad-pro';
+  font-style:italic;
+  font-weight:400;
+  src:local('myriad-pro italic'), url(./fonts/MyriadPro-It.otf-#IEfix) format('embedded-opentype'),
+  src: local('myriad-pro italic'), url(./fonts/MyriadPro-It.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'myriad-pro';
+  font-style:italic;
+  font-weight:700;
+  src:local('myriad-pro bold italic'), url(./fonts/MyriadPro-BoldIt.otf-#IEfix) format('embedded-opentype'),
+  src: local('myriad-pro bold italic'), url(./fonts/MyriadPro-BoldIt.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'minion-pro';
+  font-style:normal;
+  font-weight:400;
+  src:local('minion-pro'), url(./fonts/MinionPro-Regular.otf-#IEfix) format('embedded-opentype'),
+  src: local('minion-pro'), url(./fonts/MinionPro-Regular.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'minion-pro';
+  font-style:normal;
+  font-weight:700;
+  src:local('minion-pro bold'), url(./fonts/MinionPro-Bold.otf-#IEfix) format('embedded-opentype'),
+  src: local('minion-pro bold'), url(./fonts/MinionPro-Bold.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'minion-pro';
+  font-style:italic;
+  font-weight:400;
+  src:local('minion-pro italic'), url(./fonts/MinionPro-It.otf-#IEfix) format('embedded-opentype'),
+  src: local('minion-pro italic'), url(./fonts/MinionPro-It.otf) format('opentype');
+  font-display:block;
+} 
+@font-face { 
+  font-family:'minion-pro';
+  font-style:italic;
+  font-weight:700;
+  src:local('minion-pro bold italic'), url(./fonts/MinionPro-BoldIt.otf-#IEfix) format('embedded-opentype'),
+  src: local('minion-pro bold italic'), url(./fonts/MinionPro-BoldIt.otf) format('opentype');
+  font-display:block;
+} 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,300i,400i,500i,600i,700i,800i&display=swap'); 
+  body {  
+    font-family:"Open Sans",sans-serif;
+    font-size:18px;
+    color:rgb(51, 51, 51);
+  }  
+body { 
+    font-family: "Open Sans",sans-serif; 
+    min-width: 320px; 
+    font-size: 16px;
+} 
+
+:root { 
+    --toast-notification-message-font: normal var(--font-weight-regular) var(--font-sm-bp-sm-smaller); 
+    --toast-notification-title-font: normal var(--font-weight-semi-bold) var(--font-sm-bp-sm-smaller); 
+    --toast-notification-vertical-padding: 12px; 
+    --toast-notification-message-action-vertical-space: 8px; 
+    --toast-notification-bottom-padding: calc( var(--toast-notification-vertical-padding) - var(--toast-notification-message-action-vertical-space) ); 
+} 
+
+@media (min-width: 768px){ 
+  :root { 
+    --toast-notification-vertical-padding: 16px; 
+  } 
+}     
+
+#outputPage { 
+    position: relative; 
+    padding: 2em; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    word-break: break-word; 
+    overflow-x: hidden;
+} 
+
+.template_GENERIC { 
+    font-family: minion-pro,sans-serif; 
+    font-size: 12pt; 
+    line-height: 15pt; 
+    color: #cf4f4f; 
+    text-align: left;
+} 
+
+.template_GENERIC .LDCopyright  { 
+    font-family: "Times New Roman",Times,sans-serif;
+} 
+
+.LDCopyright  { 
+    font-family: "Times New Roman",Times,sans-serif; 
+    font-size: 67%;
+} 
+
+.templated .header  { 
+    flow: static(header);
+} 
+
+.templated .header  { 
+    display: none;
+} 
+
+.template_GENERIC .header  { 
+    font-family: myriad-pro,sans-serif; 
+    font-size: 10pt; 
+    color: rgb(188, 190, 192); 
+    position: relative;
+} 
+
+.template_GENERIC .header  { 
+    border-bottom: .5px solid rgb(188, 190, 192); 
+    box-sizing: border-box; 
+    vertical-align: bottom;
+} 
+
+.templated .footer  { 
+    flow: static(footer);
+} 
+
+.templated .footer  { 
+    display: none;
+} 
+
+.template_GENERIC .footer  { 
+    font-family: myriad-pro,sans-serif; 
+    font-size: 10pt; 
+    color: rgb(188, 190, 192); 
+    position: relative;
+} 
+
+.templated .firstHeader  { 
+    flow: static(firstHeader);
+} 
+
+.templated .firstHeader  { 
+    display: none;
+} 
+
+.template_GENERIC .firstHeader  { 
+    font-family: myriad-pro,sans-serif; 
+    font-size: 10pt; 
+    color: rgb(188, 190, 192); 
+    position: relative;
+} 
+
+.templated .firstFooter  { 
+    flow: static(firstFooter);
+} 
+
+.templated .firstFooter  { 
+    display: none;
+} 
+
+.template_GENERIC .firstFooter  { 
+    font-family: myriad-pro,sans-serif; 
+    font-size: 10pt; 
+    color: rgb(188, 190, 192); 
+    position: relative;
+} 
+
+.templated .copyright  { 
+    visibility: hidden; 
+    height: 0; 
+    string-set: copyText content();
+} 
+
+.templated .copyright  { 
+    display: none;
+} 
+
+.template_GENERIC p  { 
+    margin: 20px 0;
+} 
+
+.template_GENERIC .pageNumbers  { 
+    position: absolute; 
+    right: 0;
+} 
+
+h1 { 
+    font-size: 40px; 
+    padding: 0; 
+    margin: 0;
+} 
+
+.template_GENERIC h1  { 
+    font-family: myriad-pro,sans-serif; 
+    text-transform: uppercase; 
+    color: #cf4f4f; 
+    font-weight: 700;
+} 
+
+.template_GENERIC h1  { 
+    text-align: center; 
+    line-height: normal; 
+    margin: 14px 0 10px; 
+    font-size: 18pt;
+} 
+
+.template_GENERIC h1 + p  { 
+    text-align: center; 
+    margin-top: 10px;
+} 
+
+.template_GENERIC .partiesContainer  { 
+    border-top: .5px solid rgb(188, 190, 192);
+} 
+
+.template_GENERIC ol  { 
+    list-style: none; 
+    counter-reset: item; 
+    padding: 0; 
+    margin: 15px 0 20px;
+} 
+
+.template_GENERIC .body  { 
+    border: .5px solid rgb(188, 190, 192); 
+    border-style: solid none; 
+    box-decoration-break: slice;
+} 
+
+.templated .keepTogether  { 
+    page-break-inside: avoid;
+} 
+
+.template_GENERIC .signature  { 
+    padding-top: 20px;
+} 
+
+.templated .currentPageNum  { 
+    content: counter(page);
+} 
+
+.templated .totalPageNum  { 
+    content: counter(pages);
+} 
+
+strong { 
+    font-weight: 600;
+} 
+
+.template_GENERIC .parties  { 
+    text-align: center;
+} 
+
+.template_GENERIC ol > li:not(.lh)  { 
+    position: relative; 
+    margin: 10px 0 15px 2em; 
+    padding: 0;
+} 
+
+.template_GENERIC ol > li:not(.lh)::before { 
+    counter-increment: item; 
+    content: counter(item) ". "; 
+    font-weight: bold; 
+    position: absolute; 
+    left: -2em; 
+    width: 2em; 
+    text-align: right; 
+    padding-right: 5px; 
+    box-sizing: border-box;
+} 
+
+.template_GENERIC table  { 
+    width: 100%; 
+    border: 0; 
+    table-layout: fixed; 
+    word-wrap: break-word; 
+    border-collapse: collapse;
+} 
+
+.template_GENERIC .parties > div::after { 
+    display: block; 
+    margin: 15px 0;
+} 
+
+.template_GENERIC .parties > div:nth-child(1)::after { 
+    content: "OF THE FIRST PART";
+} 
+
+.template_GENERIC .parties > div:nth-child(2)::after { 
+    content: "OF THE SECOND PART";
+} 
+
+.template_GENERIC li.lh  { 
+    font-family: myriad-pro,sans-serif; 
+    text-transform: uppercase; 
+    color: #cf4f4f; 
+    font-weight: 700;
+} 
+
+.template_GENERIC li.lh  { 
+    margin: 20px 0 10px; 
+    padding: 0;
+} 
+
+.template_GENERIC h2  { 
+    font-family: myriad-pro,sans-serif; 
+    text-transform: uppercase; 
+    color: #cf4f4f; 
+    font-weight: 700;
+} 
+
+.template_GENERIC h2  { 
+    text-align: center; 
+    font-size: 12pt;
+} 
+
+.template_GENERIC .parties h2  { 
+    margin: 20px 0;
+} 
+
+.template_GENERIC .parties h2  { 
+    display: none;
+} 
+
+.template_GENERIC .parties h2  { 
+    margin-bottom: 12px;
+} 
+
+.template_GENERIC .parties .detail  { 
+    margin-bottom: 5px;
+} 
+
+.template_GENERIC .parties > div .detail:nth-of-type(1)::before { 
+    font-weight: bold; 
+    font-family: myriad-pro,sans-serif; 
+    display: block;
+} 
+
+.template_GENERIC .parties > div:nth-child(1) .detail:nth-of-type(1)::before { 
+    content: "BETWEEN:"; 
+    margin: 20px 0 14px;
+} 
+
+.template_GENERIC .parties > div:nth-child(2) .detail:nth-of-type(1)::before { 
+    content: "AND"; 
+    margin: 14px 0;
+} 
+
+.template_GENERIC ol > li:not(.lh) ol  { 
+    margin: 10px 0;
+} 
+
+.template_GENERIC .parties .detail > .name  { 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    word-break: break-word; 
+    overflow-x: hidden;
+} 
+
+.template_GENERIC u  { 
+    font-family: myriad-pro,sans-serif; 
+    text-transform: uppercase; 
+    color: #cf4f4f; 
+    font-weight: 700;
+} 
+
+.template_GENERIC u  { 
+    text-decoration: none;
+} 
+
+.template_GENERIC ol > li:not(.lh) ol > li  { 
+    margin: 10px 0 12px 2em;
+} 
+
+.template_GENERIC li ol > li:not(.lh)::before { 
+    content: counter(item, lower-alpha) ". ";
+} 
+
+.template_GENERIC .signature.keepTogether table td p  { 
+    margin: 20px 0 0;
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-ixKCE.style-ixKCE {  
+   background:url('//www.lawdepot.co.uk/common/images//draft_text.png') repeat-y center top/contain rgb(255, 255, 255);  
+}  
+#style-kDdmZ.style-kDdmZ {  
+   text-align:left;  
+}  
+#style-EGRCr.style-EGRCr {  
+   text-align:center;  
+}  
+#style-PrYsK.style-PrYsK {  
+   text-align:left;  
+}  
+#style-RPlSd.style-RPlSd {  
+   text-align:left;  
+}  
+#style-rZYVi.style-rZYVi {  
+   margin-bottom:18.0pt;  
+}  
+#style-G12VT.style-G12VT {  
+   margin-bottom:0.0pt;  
+}  
+#style-apoTy.style-apoTy {  
+   text-align:left;  
+}  
+#style-RPVO7.style-RPVO7 {  
+   text-align:left;  
+}  
+#style-yzGty.style-yzGty {  
+   margin-bottom:18.0pt;  
+}  
+#style-ADb5b.style-ADb5b {  
+   margin-bottom:18.0pt;  
+}  
+#style-N2nKB.style-N2nKB {  
+   text-align:left;  
+}  
+#style-xFt3w.style-xFt3w {  
+   margin-bottom:18.0pt;  
+}  
+#style-wGoSc.style-wGoSc {  
+   margin-bottom:18.0pt;  
+}  
+#style-hQ89J.style-hQ89J {  
+   text-align:left;  
+}  
+#style-ccN4J.style-ccN4J {  
+   margin-bottom:18.0pt;  
+}  
+#style-aLoS4.style-aLoS4 {  
+   margin-bottom:18.0pt;  
+}  
+#style-UmHkl.style-UmHkl {  
+   text-align:left;  
+}  
+#style-VfOGg.style-VfOGg {  
+   margin-bottom:18.0pt;  
+}  
+#style-wOo2l.style-wOo2l {  
+   text-align:left;  
+}  
+#style-Gsacz.style-Gsacz {  
+   margin-bottom:18.0pt;  
+}  
+#style-9vLyL.style-9vLyL {  
+   text-align:left;  
+}  
+#style-pTyyh.style-pTyyh {  
+   margin-bottom:18.0pt;  
+}  
+#style-dWXZa.style-dWXZa {  
+   text-align:left;  
+}  
+#style-aDkPB.style-aDkPB {  
+   margin-bottom:18.0pt;  
+}  
+#style-rcC3c.style-rcC3c {  
+   margin-bottom:18.0pt;  
+}  
+#style-c4aFw.style-c4aFw {  
+   margin-bottom:18.0pt;  
+}  
+#style-G1amR.style-G1amR {  
+   margin-bottom:18.0pt;  
+}  
+#style-BenMo.style-BenMo {  
+   margin-bottom:18.0pt;  
+}  
+#style-YXBrC.style-YXBrC {  
+   margin-bottom:18.0pt;  
+}  
+#style-yYWKB.style-yYWKB {  
+   text-align:left;  
+}  
+#style-VaWGK.style-VaWGK {  
+   margin-bottom:18.0pt;  
+}  
+#style-rrHsJ.style-rrHsJ {  
+   text-align:left;  
+}  
+#style-e3Kza.style-e3Kza {  
+   margin-bottom:18.0pt;  
+}  
+#style-nx8qO.style-nx8qO {  
+   margin-bottom:18.0pt;  
+}  
+#style-ajtsg.style-ajtsg {  
+   text-align:left;  
+}  
+#style-z1o44.style-z1o44 {  
+   margin-bottom:18.0pt;  
+}  
+#style-PPWr6.style-PPWr6 {  
+   text-align:left;  
+}  
+#style-ZwqrR.style-ZwqrR {  
+   margin-bottom:18.0pt;  
+}  
+#style-xH2XH.style-xH2XH {  
+   text-align:left;  
+}  
+#style-Rg1FA.style-Rg1FA {  
+   margin-bottom:18.0pt;  
+}  
+#style-6o5aA.style-6o5aA {  
+   text-align:left;  
+}  
+#style-nVyHC.style-nVyHC {  
+   margin-bottom:18.0pt;  
+}  
+#style-AtXQi.style-AtXQi {  
+   margin-bottom:18.0pt;  
+}  
+#style-DO3h8.style-DO3h8 {  
+   margin-bottom:18.0pt;  
+}  
+#style-8HILc.style-8HILc {  
+   margin-bottom:18.0pt;  
+}  
+#style-aOJib.style-aOJib {  
+   margin-bottom:18.0pt;  
+}  
+#style-5eYm6.style-5eYm6 {  
+   margin-bottom:18.0pt;  
+}  
+#style-FdnC2.style-FdnC2 {  
+   text-align:left;  
+}  
+#style-ki6aA.style-ki6aA {  
+   margin-bottom:18.0pt;  
+}  
+#style-518MF.style-518MF {  
+   text-align:left;  
+}  
+#style-XRl9M.style-XRl9M {  
+   margin-bottom:18.0pt;  
+}  
+#style-rrvr9.style-rrvr9 {  
+   text-align:left;  
+}  
+#style-1284J.style-1284J {  
+   margin-bottom:18.0pt;  
+}  
+#style-s5A7d.style-s5A7d {  
+   margin-bottom:18.0pt;  
+}  
+#style-LaD7x.style-LaD7x {  
+   margin-bottom:0.0pt;  
+}  
+#style-UCQmR.style-UCQmR {  
+   margin-bottom:18.0pt;  
+}  
+#style-jGcWX.style-jGcWX {  
+   margin-bottom:18.0pt;  
+}  
+#style-ammlM.style-ammlM {  
+   margin-bottom:0.0pt;  
+}  
+#style-i1sJz.style-i1sJz {  
+   text-align:left;  
+}  
+#style-8Yhmf.style-8Yhmf {  
+   margin-bottom:0.0pt;  
+}  
+#style-43Dhg.style-43Dhg {  
+   margin-bottom:18.0pt;  
+}  
+#style-Ha1Uj.style-Ha1Uj {  
+   text-align:left;  
+}  
+#style-5SBAo.style-5SBAo {  
+   margin-bottom:18.0pt;  
+}  
+#style-C7hjo.style-C7hjo {  
+   margin-bottom:18.0pt;  
+}  
+#style-NRw9A.style-NRw9A {  
+   margin-bottom:18.0pt;  
+}  
+#style-GKHk7.style-GKHk7 {  
+   margin-bottom:18.0pt;  
+}  
+#style-IlBwY.style-IlBwY {  
+   margin-bottom:18.0pt;  
+}  
+#style-vXpxV.style-vXpxV {  
+   margin-bottom:18.0pt;  
+}  
+#style-JizQd.style-JizQd {  
+   margin-bottom:18.0pt;  
+}  
+#style-7TbCg.style-7TbCg {  
+   margin-bottom:18.0pt;  
+}  
+#style-hIjT1.style-hIjT1 {  
+   margin-bottom:18.0pt;  
+}  
+#style-6MBjF.style-6MBjF {  
+   margin-bottom:0.0pt;  
+}  
+#style-lYdUW.style-lYdUW {  
+   text-align:left;  
+}  
+#style-okCzt.style-okCzt {  
+   margin-left:auto;  
+   margin-right:auto;  
+   margin-top:22.0pt;  
+   width:80%;  
+}  
+#style-7D4I4.style-7D4I4 {  
+   width:40%;  
+}  
+#style-wCBN3.style-wCBN3 {  
+   width:40%;  
+}  
+#style-RZGMs.style-RZGMs {  
+   text-align:left;  
+   vertical-align:bottom;  
+   padding:16.0pt;  
+}  
+#style-PMYad.style-PMYad {  
+   text-align:left;  
+}  
+#style-5dGwS.style-5dGwS {  
+   text-align:left;  
+   vertical-align:bottom;  
+   padding:16.0pt;  
+}  
+#style-FlcSC.style-FlcSC {  
+   text-align:left;  
+}  
+#style-t967o.style-t967o {  
+   margin-left:auto;  
+   margin-right:auto;  
+   margin-top:22.0pt;  
+   width:80%;  
+}  
+#style-EOjDk.style-EOjDk {  
+   width:40%;  
+}  
+#style-2kWU6.style-2kWU6 {  
+   width:40%;  
+}  
+#style-kO4AF.style-kO4AF {  
+   text-align:left;  
+   vertical-align:bottom;  
+   padding:16.0pt;  
+}  
+#style-ZPjPl.style-ZPjPl {  
+   text-align:left;  
+}  
+#style-4pbGK.style-4pbGK {  
+   text-align:left;  
+   vertical-align:bottom;  
+   padding:16.0pt;  
+}  
+#style-HLD4O.style-HLD4O {  
+   text-align:left;  
+}  
+#style-LDoWx.style-LDoWx {  
+   text-align:left;  
+}  
+#style-oBiIV.style-oBiIV {  
+   margin-left:auto;  
+   margin-right:auto;  
+   margin-top:22.0pt;  
+   width:80%;  
+}  
+#style-6hzCp.style-6hzCp {  
+   width:40%;  
+}  
+#style-MowIl.style-MowIl {  
+   width:40%;  
+}  
+#style-3k7Vr.style-3k7Vr {  
+   text-align:left;  
+   vertical-align:bottom;  
+   padding:16.0pt;  
+}  
+#style-nSlOI.style-nSlOI {  
+   text-align:left;  
+}  
